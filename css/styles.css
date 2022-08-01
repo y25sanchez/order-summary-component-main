@@ -1,0 +1,209 @@
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+:root {
+    --Pale-blue: hsl(225, 100%, 94%);
+    --Bright-blue: hsl(245, 75%, 52%);
+    --Very-pale-blue: hsl(225, 100%, 98%);
+    --Desaturated-blue: hsl(224, 23%, 55%);
+    --Dark-blue: hsl(223, 47%, 23%);
+    --active-color: rgb(118, 108, 241);
+}
+
+body {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 1.6rem;
+  background-image: url(/images/pattern-background-desktop.svg);
+  background-repeat: no-repeat;
+  background-color: var(--Pale-blue);
+  background-position: center -25vh;
+  background-size: cover;
+}
+
+.card{
+    max-width: 45rem;
+    background-color: white;
+    border-radius: 2rem;
+    overflow: hidden;
+    margin: 102px auto;
+    transition: transform 0.5s;
+}
+
+.card:hover{
+    transform: scale(1.01);
+}
+
+.card__content{
+    margin: 0 50px;
+}
+
+.card__content__desc{
+    text-align: center;
+    margin-top: 56px;
+}
+
+.card__content__desc h2{
+    font-weight: 900;
+    color: var(--Dark-blue);
+}
+
+.card__content__desc p{
+    color: var(--Desaturated-blue);
+    line-height: 1.5;
+}
+
+.card__content__plan{
+    max-width: 35.4rem;
+    height: 9.8rem;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(248, 249, 254);
+    border-radius: 1.5rem;
+
+}
+
+
+.card__content__plan__unit{
+    display: flex;
+    align-items: center;
+    margin: 0 26px ;
+}
+
+.card__content__plan__unit img{
+    height: 4.8rem;
+    padding-right: 20px;
+}
+
+.card__content__plan__unit h4{
+    font-size: 1.4rem;
+    margin: 10px 0 5px 0;
+    font-weight: 900;
+    color: var(--Dark-blue);
+}
+
+.card__content__plan__unit p{
+    color: var(--Desaturated-blue);
+    margin-top: 0;
+    font-size: 1.4rem;
+}
+
+.card__content__plan__unit a{
+    font-size: 1.2rem;
+    font-weight: 900;
+    color: var(--Bright-blue);
+    transition: color 0.2s, text-decoration 0.2s;
+}
+
+.card__content__plan__unit a:hover{
+    text-decoration: none;
+    color: var(--active-color);
+}
+
+.card__content__footer{
+    text-align: center;
+    margin: 40px 0 0 0;
+}
+
+.card__content__footer__pro__a{
+    max-width: 35.4rem;
+    height: 5.2rem;
+    background-color: var(--Bright-blue);
+    border-radius: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.2s, box-shadow 0.2s;
+}
+
+.card__content__footer__pro a{
+    font-size: 1.4rem;
+    font-weight: 900;
+    color: white;
+    text-decoration: none;
+    border-radius: 1.5rem;
+    
+}
+
+.card__content__footer__pro__a:hover{
+    background-color: var(--active-color) ;
+    box-shadow: 0px 15px 19px -8px rgba(118,108,241,0.44);
+    cursor: pointer;
+}
+
+.card__content__footer__pro{
+    margin-bottom: 3.8rem;
+}
+
+.card__content__footer__can{
+    margin-bottom: 52px;
+}
+
+.card__content__footer__can a{
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--Desaturated-blue);
+    transition: color 0.2s;
+}
+
+.card__content__footer__can a:hover{
+    color:black;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width:376px) {
+    
+    body{
+        background-image: url(/images/pattern-background-mobile.svg);
+        background-repeat: no-repeat;
+        background-color: var(--Pale-blue);
+        background-position: center -60vh;
+        background-size: cover;
+    }
+
+    .card{
+        max-width: 32.8rem;
+    }
+    
+    .card__content__desc p{
+        font-size: 1.4rem;
+        margin: 0 32px 20px 32px;
+        
+    }
+    
+    .card__content{
+        margin: 0 12px;
+    }
+    
+}
+
+@media screen and (max-width:300px){
+    
+    .card{
+        max-width: 27rem;
+    }
+    
+    .card__content{
+        margin: 0 6px;
+    }
+
+    .card__content__plan{
+        justify-content: space-around;
+    }
+
+    .card__content__plan__unit{
+        margin: 0%;
+    }
+
+    .card__content__plan__unit a{
+        margin-left: -13;
+    }
+}
